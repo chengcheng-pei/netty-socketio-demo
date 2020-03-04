@@ -15,7 +15,9 @@ public class ChatLauncher {
         server.addEventListener("chatevent", ChatObject.class, new DataListener<ChatObject>() {
             @Override
             public void onData(SocketIOClient client, ChatObject data, AckRequest ackRequest) {
-                // broadcast messages to all clients
+                // Print the data from client
+                System.out.println("Test:" + data.toString());
+                // Receive data from client and then broadcast messages to all clients
                 server.getBroadcastOperations().sendEvent("chatevent", data);
             }
         });

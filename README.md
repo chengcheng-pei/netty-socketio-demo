@@ -44,3 +44,11 @@ You can select appropriate server launcher by command with `main.class` paramete
 
 
    
+# Start server and open client index.html
+In `server/`
+
+Compile into one single jar, Run `mvn clean compile assembly:single`
+
+Run it: `java -jar target/demo-1.0.0-SNAPSHOT-jar-with-dependencies.jar`
+
+Open client index.html: `/client/index.html`

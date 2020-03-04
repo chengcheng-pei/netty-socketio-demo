@@ -27,5 +27,7 @@ public class ChatObject {
     public void setMessage(String message) {
         this.message = message;
     }
-
+    public String toString() {
+        return "User: " + this.userName + ", Message:" + this.message;
+    }
 }
